@@ -61,11 +61,11 @@ export default {
             });
             this.loading = true;
             try {
-                const response = await axios.post(process.env.VUE_APP_PYTHON_UTILITY_SERVICE_URL+'/generate_vector', {
+                const response = await axios.post(process.env.VUE_APP_PYTHON_UTILITY_SERVICE_URL+'generate_vector', {
                     categories: this.options,
                     selectedOptions: allSelectedOptions
                 }).then(async () => {
-                    const resp = await axios.get(process.env.VUE_APP_PYTHON_UTILITY_SERVICE_URL+'/check_status');
+                    const resp = await axios.get(process.env.VUE_APP_PYTHON_UTILITY_SERVICE_URL+'check_status');
                     console.log("response from fetch status: ", resp.data);
                     this.status = resp.data.status;
                     this.loading = false;
