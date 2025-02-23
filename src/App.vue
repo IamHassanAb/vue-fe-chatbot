@@ -1,6 +1,8 @@
 <template>
-  <Options />
-  <ChatBot />
+  <div id="app">
+    <Options />
+    <ChatBot />
+  </div>
 </template>
 
 <script>

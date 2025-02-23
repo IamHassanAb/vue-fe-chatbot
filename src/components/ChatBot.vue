@@ -2,7 +2,7 @@
     <div class="chatbot">
         <div v-if="messages.length > 0" class="messages">
             <div v-for="(message, index) in messages" :key="index" :class="message.sender">
-                <img :src="message.sender === 'user' ? userLogo : botLogo" class="avatar" />
+                <img :src="message.sender === 'user' ? userLogo : botLogo" :alt=" message.sender === 'user' ? 'User icons created by Freepik - Flaticon' :'Robot icons created by Hilmy Abiyyu A. - Flaticon'" class="avatar" />
                 <div class="message-text" v-html="message.text"></div>
             </div>
             <div v-if="loading" class="loading">Loading...</div>
