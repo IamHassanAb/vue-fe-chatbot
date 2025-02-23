@@ -44,7 +44,7 @@ export default {
     methods: {
         async fetchOptions() {
             try {
-                const response = await axios.get('http://127.0.0.1:8000/get_categories');
+                const response = await axios.get(process.env.VUE_APP_PYTHON_UTILITY_SERVICE_URL+'/get_categories');
                 console.log("response", response.data);
                 this.options = response.data;
             } catch (error) {
@@ -61,11 +61,11 @@ export default {
             });
             this.loading = true;
             try {
-                const response = await axios.post('http://127.0.0.1:8000/generate_vector', {
+                const response = await axios.post(process.env.VUE_APP_PYTHON_UTILITY_SERVICE_URL+'/generate_vector', {
                     categories: this.options,
                     selectedOptions: allSelectedOptions
                 }).then(async () => {
-                    const resp = await axios.get('http://127.0.0.1:8000/check_status');
+                    const resp = await axios.get(process.env.VUE_APP_PYTHON_UTILITY_SERVICE_URL+'/check_status');
                     console.log("response from fetch status: ", resp.data);
                     this.status = resp.data.status;
                     this.loading = false;

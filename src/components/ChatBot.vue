@@ -34,7 +34,7 @@ export default {
                 
                 this.loading = true;
                 console.log('Sending message:', typeof this.newMessage);
-                await axios.post('http://127.0.0.1:8000/generate_response', {
+                await axios.post(process.env.VUE_APP_PYTHON_UTILITY_SERVICE_URL + '/generate_response', {
                     input_text: this.newMessage
                 }).then((resp)=> {
                     this.newMessage = '';
