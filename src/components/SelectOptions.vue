@@ -44,7 +44,7 @@ export default {
     methods: {
         async fetchOptions() {
             try {
-                const response = await axios.get(process.env.VUE_APP_PYTHON_UTILITY_SERVICE_URL+'/get_categories');
+                const response = await axios.get(process.env.VUE_APP_PYTHON_UTILITY_SERVICE_URL+'get_categories');
                 console.log("response", response.data);
                 this.options = response.data;
             } catch (error) {
