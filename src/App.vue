@@ -1,20 +1,21 @@
 <template>
   <div id="app">
-    <Options />
-    <ChatBot />
+    <!-- <Options /> -->
+    <HelloWorld/>
   </div>
 </template>
 
 <script>
-import ChatBot from './components/ChatBot.vue'
-import Options from './components/SelectOptions.vue';
+// import ChatBot from './components/ChatBot.vue';
+import HelloWorld from './components/HelloWorld.vue';
+// import Options from './components/SelectOptions.vue';
 // import axios from 'axios';
 
 export default {
   name: 'App',
   components: {
-    ChatBot,
-    Options
+    HelloWorld,
+    // Options
   },
 }
 </script>
@@ -26,6 +27,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
 }
 </style>

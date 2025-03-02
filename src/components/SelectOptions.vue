@@ -1,7 +1,7 @@
 <template>
     <div class="options">
         <div class="multi-select">
-            <label class="typo__label">Simple select / dropdown</label>
+            <label class="typo__label">MultiSelect (Decorative)</label>
             <MultiSelect id="multiselect" v-model="selectedOptions" :options="options" :multiple="true"
                 :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick some"
                 label="name" track-by="name" :preselect-first="true">
@@ -19,7 +19,7 @@
         <div class="generate-vector">
             <label v-if="this.loading == true" class="status-label">Generating Vector Please Wait...</label>
             <label v-else-if="this.loading == false & status == 1" class="status-label">Vector is Generated</label>
-            <button @click="generateVector" class="generate-button">Generate Vector</button>
+            <button @click="generateVector" class="generate-button">Generate Vector (Decorative)</button>
         </div>
     </div>
 </template>
@@ -87,9 +87,9 @@ export default {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .multi-select {
